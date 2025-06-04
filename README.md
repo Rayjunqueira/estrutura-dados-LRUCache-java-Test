@@ -16,22 +16,6 @@ Essa estrutura é muito utilizada em sistemas backend para armazenar dados tempo
 - Permite recuperar valores pelo `key`.
 - Método para imprimir o estado atual do cache.
 
----
-
-## Estrutura do projeto
-
-lru-cache/
-├── src/
-│ ├── main/
-│ │ └── java/
-│ │ └── cache/
-│ │ ├── LRUCache.java
-│ │ └── TestLRUCache.java (exemplo simples de testes sem JUnit)
-├── README.md
-└── .gitignore
-
-
----
 
 ## Como compilar e executar (sem Maven)
 
