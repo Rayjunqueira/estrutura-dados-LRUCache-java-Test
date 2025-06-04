@@ -1,18 +1,49 @@
-## Getting Started
+# Projeto LRU Cache em Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Descrição
 
-## Folder Structure
+Implementação de um cache com política **Least Recently Used (LRU)** em Java, utilizando uma combinação de **HashMap** e **lista duplamente ligada** para garantir operações rápidas de acesso, inserção e remoção.
 
-The workspace contains two folders by default, where:
+Essa estrutura é muito utilizada em sistemas backend para armazenar dados temporariamente e otimizar o desempenho, reduzindo acessos repetidos a dados custosos.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+---
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Funcionalidades
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Armazena até uma capacidade máxima definida.
+- Insere ou atualiza elementos, movendo-os para o topo da lista como "mais recentes".
+- Remove automaticamente o elemento menos usado (LRU) quando o cache estiver cheio.
+- Permite recuperar valores pelo `key`.
+- Método para imprimir o estado atual do cache.
 
-## Dependency Management
+---
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Estrutura do projeto
+
+lru-cache/
+├── src/
+│ ├── main/
+│ │ └── java/
+│ │ └── cache/
+│ │ ├── LRUCache.java
+│ │ └── TestLRUCache.java (exemplo simples de testes sem JUnit)
+├── README.md
+└── .gitignore
+
+
+---
+
+## Como compilar e executar (sem Maven)
+
+1. Abra o terminal no VSCode.
+
+2. Compile os arquivos Java:
+
+```bash
+cd src/main/java
+javac cache/LRUCache.java cache/TestLRUCache.java
+
+
+## Execute o projeto de teste
+
+java cache.TestLRUCache
